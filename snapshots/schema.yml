@@ -1,0 +1,26 @@
+version: 2
+
+snapshots:
+  - name: DIM_CORE__ATHLETES_SNAPSHOT
+    columns:
+      - name: athlete_id
+        tests:
+          - dbt_constraints.primary_key
+
+  - name: DIM_CORE__EVENTS_SNAPSHOT
+    columns:
+      - name: event_id
+        tests:
+          - dbt_constraints.primary_key
+
+  - name: DIM_CORE__GAMES_SNAPSHOT
+    columns:
+      - name: games_id
+        tests:
+          - dbt_constraints.primary_key
+          
+  - name: DIM_CORE__TEAMS_SNAPSHOT
+    columns:
+      - name: team_id
+        tests:
+          - dbt_constraints.primary_key

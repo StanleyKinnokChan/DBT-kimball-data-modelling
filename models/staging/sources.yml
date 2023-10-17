@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: sourcename
+    database: DEMO_DBT_KIMBALL_DATA_MODELLING
+    schema: origin
+    description: "The One Big Table"
+    tables: 
+      - name: OLYMPICS_DATA
+        columns: 
+          - name: ID
+          - name: Name
+          - name: Sex
+          - name: Age
+          - name: Height
+          - name: Weight
+          - name: Team
+          - name: NOC
+          - name: Games
+          - name: Year
+          - name: Season
+          - name: City
+          - name: Sport
+          - name: Event
+          - name: Medal
+          - name: NOC_Region
+          - name: NOC_notes

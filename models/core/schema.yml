@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fct_core__results
+    columns:
+      - name: athlete_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('DIM_CORE__ATHLETES_SNAPSHOT')
+              pk_column_name: athlete_id
+
+      - name: event_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('DIM_CORE__EVENTS_SNAPSHOT')
+              pk_column_name: event_id
+
+      - name: games_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('DIM_CORE__GAMES_SNAPSHOT')
+              pk_column_name: games_id
+
+      - name: team_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('DIM_CORE__TEAMS_SNAPSHOT')
+              pk_column_name: team_id
+

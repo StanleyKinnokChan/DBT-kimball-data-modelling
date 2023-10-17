@@ -1,0 +1,13 @@
+exposures:
+
+  - name: olympic_report
+    type: dashboard
+    maturity: medium
+
+    depends_on:
+      - ref('fct_core__results')
+      - source('sourcename','OLYMPICS_DATA')
+
+    owner:
+      name: Stanley Chan
+      email: stanleykinnok.chan@gmail.com
