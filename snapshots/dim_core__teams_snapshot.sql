@@ -17,7 +17,7 @@ with CTE as (
 		noc_region,
 		NOC_notes,
 		created_at
-	FROM {{ ref('stg_origin__OLYMPICS_DATA') }}
+	FROM {{ ref('STG_ORIGIN__OLYMPICS_DATA') }}
 	)
 	
 select 

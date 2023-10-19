@@ -16,7 +16,7 @@
 {% set constraint_name = table ~ "_" ~ prikey ~ '_PK' %}
 
 {% if query_result==0 %}
-  {{log("Insert the following posthook:", info=True)}}
+  {{log("Primary key will be inserted into " ~ table, info=True)}}
   ALTER TABLE {{ this }} ADD CONSTRAINT {{constraint_name}} PRIMARY KEY ({{ prikey }})
 {% else %}
   {{log("There was Primary key on " ~ table ~ ". Process will be continued", info=True)}}
@@ -25,3 +25,4 @@
 
 
 {% endmacro %}
+

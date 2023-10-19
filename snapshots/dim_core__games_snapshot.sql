@@ -17,7 +17,7 @@ with CTE as (
 		season, 
 		city,
 		created_at
-	FROM {{ ref('stg_origin__OLYMPICS_DATA') }}
+	FROM {{ ref('STG_ORIGIN__OLYMPICS_DATA') }}
 	)
 
 select 
