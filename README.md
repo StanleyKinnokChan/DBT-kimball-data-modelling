@@ -13,6 +13,7 @@ This project aims at demostrating how to perform Kimball data modelling in DBT. 
 
 **Noted that:**
 - The project is just for demostrating the process of modelling the data. However, in real life the modelling method depends on the real needs. For example, this olympic data contains the historical event, which may not require a SCD type II dimention capture.
+- For a more complex models with more transformation logic included between the source and fact model, adding extra intermediate models as steps would be a good way to go
  
 <br/><br/>
 # Content
