@@ -1,7 +1,7 @@
 # About
 This project aims at demostrating how to perform Kimball data modelling in DBT. In this example, the data were normalized into 4 dimension tables and 1 fact table from a One Big Table (OBT) in Snowflake. The principle would be the same if the data source is in normalized form which requires the denormalization processs (e.g. from 3NF to star schema) in any OLAP datawarehouse.
 
-![My Remote Image](https://i.imgur.com/LZLBJFJ.png)
+![My Remote Image](https://i.imgur.com/69gEB2k.png)
 
 **Features:**
 - The raw data here minmic the a data stream being loaded into a selected datawarehouse (Snowflake in this example) after Extract and Load process, which grows over time. The dbt model enables us to perform the entire data modelling process, which can be also orchestrated by the tool like Airflow or Perfect. 
