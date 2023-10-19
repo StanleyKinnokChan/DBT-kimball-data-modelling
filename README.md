@@ -12,7 +12,7 @@ This project aims at demostrating how to perform Kimball data modelling in DBT. 
 
 
 **Noted that:**
-- THe project is just for demostrating the process of modelling the data. However, in real life the modelling method depends on the real needs. For example, this olympic data contains the historical event, which may not requires a SCD type II capture.
+- The project is just for demostrating the process of modelling the data. However, in real life the modelling method depends on the real needs. For example, this olympic data contains the historical event, which may not require a SCD type II dimention capture.
  
 <br/><br/>
 # Content
