@@ -49,9 +49,12 @@ The origin data sourced from originally sourced from [Kaggle](https://www.kaggle
 <br/><br/>
 # Step 0. Project setup
 
+#### Set up dbt
+First, installing dbt-snowflake using `python -m pip install dbt-snowflake` and config the profiles.yml in %userprofile%/.dbt.  The example can be seen in [here](https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup)
+
 #### Create snowflake DB and schema for this project
 
-First create warehouse, database and schema decidated to this project in Snowflake.
+Next, create warehouse, database and schema decidated to this project in Snowflake.
 ```sh
 create warehouse demo_dbt WAREHOUSE_SIZE = Xsmall AUTO_SUSPEND = 60;
 CREATE DATABSE DEMO_DBT_KIMBALL_DATA_MODELLING;
