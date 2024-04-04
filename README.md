@@ -1,7 +1,7 @@
 # About
 This project aims at demostrating how to perform Kimball data modelling in DBT. In this example, the data were normalized into 4 dimension tables and 1 fact table from a One Big Table (OBT) in Snowflake. The principle would be the same if the data source is in normalized form which requires the denormalization processs (e.g. from 3NF to star schema) in any OLAP datawarehouse.
 
-![My Remote Image](https://i.imgur.com/Q8aqTkS.png)
+![My Remote Image](https://i.imgur.com/p8e3Uj9.png)
 
 **Features:**
 - The raw data here minmic the a data stream being loaded into a selected datawarehouse (Snowflake in this example) after Extract and Load process, which grows over time. The dbt model enables us to perform the entire data modelling process, which can be also orchestrated by the tool like Airflow or Perfect. 
@@ -22,7 +22,8 @@ This project aims at demostrating how to perform Kimball data modelling in DBT. 
 - [Step 2. Dimention Tables]( )
 - [Step 3. Fact Table]( )
 - [Step 4. Primary key & foreign key with testing]( )
-- [Step 5. Exposure & Documentation]( )
+- [Step 5. Running the model]( )
+- [Step 6. Exposure & Documentation]( )
 <br/><br/>
 # Introduction
 
@@ -75,6 +76,12 @@ packages:
   - package: dbt-labs/dbt_utils
     version: 1.1.1
 ```
+Then install the package using `dbt deps`
+
+#### Load the seed csv
+Load the seed csv by the command `dbt seed`
+
+
 <br/><br/>
 # Step 1. Source & Staging Model
 In this step the data were loaded from the source (the csv data that was uploaded in the previous step). In the model, we would use `{{ source(source_name, table_name) }}` jinja function to reference the source. To the set up the connection to the source, a sources.yml **sources.yml**  was created within **/model/staging** folder. 
@@ -134,8 +141,13 @@ For the data warehouse not supported by the dbt_constraints, we can make use of 
 
 ![My Remote Image](https://i.imgur.com/0Fosa8N.png)
 
+# Step 5. Running the model
+First the source model and fact table were built by `dbt run --full-refresh`.
+
+Afterward, the fact table and the dimension tables can be incremental loaded by `dbt snapshot`.
+
 <br/><br/>
-# Step 5. Exposure & Documentation
+# Step 6. Exposure & Documentation
 For project management and documentation purpose, an exposure was added for recording the details of the downstream model consumer. It will also be shown in the DAG/ lineage graph. 
 
 ![My Remote Image](https://i.imgur.com/SaTS2QO.png)
