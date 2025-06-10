@@ -25,11 +25,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 seeds:
-  kimball_data_modelling:
+  DBT:
       +schema: origin
 
 models:
-  kimball_data_modelling:
+  DBT:
     +materialized: table
     core:
       +schema: core
@@ -38,5 +38,5 @@ models:
 
 
 snapshots:
-  kimball_data_modelling:
+  DBT:
     +schema: core
