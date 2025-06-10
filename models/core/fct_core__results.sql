@@ -7,7 +7,7 @@ with CTE AS (
         games_id,
         event_id,
         medal
-    FROM {{ ref('STG_ORIGIN__OLYMPICS_DATA') }} s
+    FROM {{ ref('STG_ORIGIN__OLYMPICS_DATA') }}
     )
 
 select *

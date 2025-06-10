@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: sourcename
-    database: DEMO_DBT_KIMBALL_DATA_MODELLING
+    database: DBT
     schema: origin
     description: "The One Big Table"
     tables: 
