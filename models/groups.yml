@@ -1,0 +1,8 @@
+version: 2
+
+groups:
+  - name: noti_test
+    owner:
+      # Email is required to receive model-level notifications, additional properties are also allowed.
+      name: "noti_test"
+      email: stanley.chan@theinformationlab.co.uk
