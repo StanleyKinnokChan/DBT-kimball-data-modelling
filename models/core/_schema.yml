@@ -2,3 +2,5 @@ version: 2
 
 models:
   - name: fct_core__results
+    config:
+      group: noti_test
